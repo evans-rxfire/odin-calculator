@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Things to do:
+    format buttons
+        number buttons and operator buttons same size, except
+        add + button twice as tall (takes up two rows)
+        border-radius to smooth corners
+        colors?
+    format display
+        color
+        font in display?
+    
+*/
