@@ -2,7 +2,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 /* Things to do:
     format buttons
         number buttons and operator buttons same size, except
@@ -14,3 +13,22 @@ body {
         font in display?
     
 */
+#button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-row {
+    display: flex;
+    
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#clear {
+    margin-right: auto;
+}
