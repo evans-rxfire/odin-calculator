@@ -1,11 +1,77 @@
-//To do list:
-//create function for basic math operators: add, subtract, multiply, divide
-//a calculator operation will consist of a number, an operator, and another number. create three variables one for each part of operation
-//create a new function called operate() that takes an operator and two numbers then calls one of the functions on the numbers
-//create functions that populate the display when digit buttons are clicked. content of display stored in variable for later use
-//store 1st and 2nd numbers input by user, then operate() on them when user clicks = button - based on the operator selected between numbers
-    //when operate() called, update display with result of oepration
-    //determine how to store all values and call operate() function with them. === hardest part of project
+const add = function(a, b) {
+    return a + b;
+};
+
+const subtract = function(a, b) {
+    return a - b;
+};
+
+const multiply = function(a, b) {
+    return a * b;
+};
+
+const divide = function(a, b) {
+    return a / b;
+};
+
+let firstNumber = null;
+let secondNumber = null;
+let operator = null;
+
+let currentInput = "";
+
+const numberButtons = document.querySelectorAll(".number-button");
+
+numberButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        currentInput += button.value;
+        document.getElementById("display-text").textContent = currentInput;
+    });
+});
+
+const operatorButtons = document.querySelectorAll(".operator-button");
+
+operatorButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        if (currentInput === "") return;
+        firstNumber = parseFloat(currentInput);
+        operator = button.value;
+        currentInput = "";
+        document.getElementById("display-text").textContent = operator;
+    });
+});
+
+function operate(operator, a, b) {
+    switch (operator) {
+        case "+":
+            return add(a, b);
+        case "-":
+            return subtract(a, b);
+        case "*":
+            return multiply(a, b);
+        case "/":
+            return b !== 0 ? divide(a, b) : "Error";
+        default:
+            return "Error";
+    }
+}
+
+const equalsButton = document.getElementById("equals");
+equalsButton.addEventListener("click", () => {
+    if (firstNumber !== null && operator !== null && currentInput !== "") {
+        secondNumber = parseFloat(currentInput);
+
+        let result = operate(operator, firstNumber, secondNumber);
+
+        currentInput = result.toString();
+
+        firstNumber = null;
+        operator = null;
+
+        document.getElementById("display-text").textContent = currentInput;
+    }
+});
+
 
 //Bugs to watch out for:
     //calculator should not evaluate more than a single pair of numbers at a time.
