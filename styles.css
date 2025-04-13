@@ -2,17 +2,7 @@ body {
     margin: 0;
     padding: 0;
 }
-/* Things to do:
-    format buttons
-        number buttons and operator buttons same size, except
-        add + button twice as tall (takes up two rows)
-        border-radius to smooth corners
-        colors?
-    format display
-        color
-        font in display?
-    
-*/
+
 #calculator {
     border: solid 5px black;
     border-radius: 5px;
@@ -28,17 +18,17 @@ body {
     border-radius: 2px;
     height: 100px;
     box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 10px;
 }
 
 #display-text {
-    font-size: 2rem;
-    text-align: end;
-    font-family: "Doto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-    font-variation-settings:
-      "ROND" 0;
+    margin: 0;
+    font-size: 3rem;
+    text-align: right;
+    font-family: 'alarm clock', sans-serif;
 }
 
 #button-container {
@@ -61,15 +51,19 @@ button {
     font-size: 1.5rem;
 }
 
+button:disabled {
+    opacity: 75%;
+    cursor: not-allowed;
+}
+
 #zero, #divide {
 margin-left: auto;
 }
 
-#divide {
-    
+#clear {
+    background-color: darkorange;
 }
 
-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+.error {
+    color: red;
 }

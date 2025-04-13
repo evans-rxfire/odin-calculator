@@ -1,40 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/alarm-clock" rel="stylesheet">            
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="calculatorJS.js" defer></script>
     <title>Calculator Project</title>
 </head>
+
 <body>
-    <!--What is needed in the calculator:
-    display
-        initially fill w/ dummy numbers so it looks correct
-    number buttons
-        start from bottom
-        4 rows, 0 on bottom row, centered
-    operator buttons
-        + - * / and =
-        to the left of the number buttons
-    clear button
-    
-    extra credit
-        decimal button
-        backspace button
-    -->
     <div id="calculator">
         <div id="display">
             <p class="display" id="display-text">1234567890</p>
         </div>
         <div id="button-container">
             <div class="button-row">
-                <button class="clear-button" id="clear">C</button>
-                <button class="operator-button" id="backspace"><i class="material-icons">backspace</i></button>
+                <button id="clear">C</button>
+                <button id="backspace"><i class="material-icons">backspace</i></button>
                 <button class="operator-button" id="divide" value="/">/</button>
             </div>
             <div class="button-row">
@@ -43,21 +28,18 @@
                 <button class="number-button" value="9">9</button>
                 <button class="operator-button" value="*">*</button>
             </div>
-            
             <div class="button-row">
                 <button class="number-button" value="4">4</button>
                 <button class="number-button" value="5">5</button>
                 <button class="number-button" value="6">6</button>
                 <button class="operator-button" value="-">-</button>
             </div>
-            
             <div class="button-row">
                 <button class="number-button" value="1">1</button>
                 <button class="number-button" value="2">2</button>
                 <button class="number-button" value="3">3</button>
                 <button class="operator-button" value="+">+</button>
             </div>
-            
             <div class="button-row">
                 <button class="number-button" id="zero" value="0">0</button>
                 <button class="number-button" id="decimal" value=".">.</button>
@@ -65,6 +47,6 @@
             </div>
         </div>
     </div>
-
 </body>
+
 </html>
