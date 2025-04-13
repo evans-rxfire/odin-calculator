@@ -13,9 +13,32 @@ body {
         font in display?
     
 */
+#calculator {
+    border: solid 5px black;
+    border-radius: 5px;
+    width: 320px;
+    margin: auto;
+    padding: 5px;
+    background-color: lightgray;
+}
 
 #display {
-    background-color: aqua;
+    background-color: rgb(100, 255, 255);
+    border: solid 2px black;
+    border-radius: 2px;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+#display-text {
+    font-size: 2rem;
+    text-align: end;
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+      "ROND" 0;
 }
 
 #button-container {
@@ -29,14 +52,24 @@ body {
 }
 
 button {
-    width: 50px;
-    height: 50px;
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
     border-radius: 5px;
     background-color: darkgrey;
     font-weight: bold;
     font-size: 1.5rem;
 }
 
-#clear {
-    margin-right: auto;
+#zero, #divide {
+margin-left: auto;
+}
+
+#divide {
+    
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
